@@ -1,3 +1,3 @@
-        // if(isAvailable(choice, arr)){
-
+        // if(holder){
+        //     printf("hit");
         // };
