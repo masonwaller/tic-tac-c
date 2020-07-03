@@ -17,7 +17,10 @@ int main() {
         int holder = isAvailable(choice, arr, n);
         if(holder != -1){
             arr[holder] = (turn)? 'O' : 'X';
-        };
+        } else if (holder == -1){
+            printf("Place already chosen or doesn't exist.");
+            turn = (turn)? 0 : 1;
+        }
         char place = (turn)? 'O' : 'X';
 
         if(arr[0]==place && arr[1]==place && arr[2]==place){
