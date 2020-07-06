@@ -9,6 +9,7 @@ int main() {
     int end = 0;
     int turn = 0;
     char choice;
+    int cat = 0;
 
     while(!end) {
         printf("\n%c_|_%c_|_%c\n%c_|_%c_|_%c\n%c | %c | %c\n", arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
@@ -47,8 +48,11 @@ int main() {
         } else if(arr[2]==place && arr[5]==place && arr[8]==place){
             printf("\n%s WINS", (turn)? "P2":"P1");
             end = 1;
+        } else if(cat >= 8){
+            printf("CATS GAME");
+            end = 1;
         }
-
+        cat += 1;
         turn = (turn)? 0 : 1;
     };
     printf("\n%c_|_%c_|_%c\n%c_|_%c_|_%c\n%c | %c | %c\n", arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
